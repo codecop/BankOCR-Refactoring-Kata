@@ -3,9 +3,17 @@ import java.util.ArrayList;
 
 public class Ocr {
 
+    private static final char[][] DIGITS = new char[][] {
+            " _       _   _       _   _   _   _   _  ".toCharArray(),
+            "| |   |  _|  _| |_| |_  |_    | |_| |_| ".toCharArray(),
+            "|_|   | |_   _|   |  _| |_|   | |_|  _| ".toCharArray(),
+            "                                        ".toCharArray()
+    };
+
     public static List<String> parse(String... lines) {
         final List<String> result = new ArrayList<String>();
         final char[] work = new char[13];
+
         int i,j,k,l,m;
         boolean got1, ok;
         for (i = 0; i < lines.length; i += 4) {
@@ -17,7 +25,7 @@ public class Ocr {
                     ok = true;
                     for (l = 0; l < 4; ++l) {
                         for (m = 0; m < 4; ++m) {
-                            if (DataUtils.digits[l][4*k+m] != lines[i+l].charAt(4*j+m))
+                            if (DIGITS[l][4*k+m] != lines[i+l].charAt(4*j+m))
                                 ok = false;
                         }
                     }
@@ -37,4 +45,3 @@ public class Ocr {
         return result;
     }
 }
-
