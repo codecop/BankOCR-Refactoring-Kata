@@ -19,6 +19,9 @@ very short refactoring session, with tiny little steps.
 
 
 
-You don't need to know where you're headed when you start.
-
+//---------------------------------------------------------------------//
+//                                                                     //
+//      You don't need to know where you're headed when you start.     //
+//                                                                     //
+//---------------------------------------------------------------------//
 
