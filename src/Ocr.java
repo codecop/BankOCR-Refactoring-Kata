@@ -8,7 +8,6 @@ public class Ocr {
         final char[] work = new char[13];
         int i,j,k,l,m;
         boolean got1, ok;
-
         for (i = 0; i < lines.length; i += 4) {
             work[9] = work[10] = work[11] = work[12] = ' ';
             for (j = 0; j < 9; ++j) {
