@@ -6,13 +6,24 @@ OCR Kata Requirements
         "|_| |_| |_| |_| |_| |_| |_| |_| |_| "
         "|_| |_| |_| |_| |_| |_| |_| |_| |_| "
         "                                    "
-   Returns: "888888888"
+   Example returns: "888888888"
 
-2. Returns ? for an invalid character.
+2. Accepts more than one account number in a single set of strings (so, more than 4).
 
-3. Returns ILL when it contains invalid character. "888888?88 ILL"
+3. Returns ? for an invalid character.
+
+4. Returns ILL when it contains invalid character. "888888?88 ILL"
 
 
+YOUR MISSION:
 
+Implement a checksum.
 
+    account number:  6  6  4  3  7  1  4  9  5
+    position names:  d9 d8 d7 d6 d5 d4 d3 d2 d1
+
+    checksum calculation:
+    (1*d1+ 2*d2 + 3*d3 + ... + 9*d9) mod 11 = 0
+
+    Example returns: "664371495 ERR"
 
