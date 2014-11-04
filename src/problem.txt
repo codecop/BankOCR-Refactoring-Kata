@@ -1,0 +1,18 @@
+OCR Kata Requirements
+
+1. Accepts four strings of characters ("lines") and returns a
+   nine-digit account number as a string. Like this:
+        " _   _   _   _   _   _   _   _   _  "
+        "|_| |_| |_| |_| |_| |_| |_| |_| |_| "
+        "|_| |_| |_| |_| |_| |_| |_| |_| |_| "
+        "                                    "
+   Returns: "888888888"
+
+2. Returns ? for an invalid character.
+
+3. Returns ILL when it contains invalid character. "888888?88 ILL"
+
+
+
+
+

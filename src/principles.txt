@@ -1,0 +1,29 @@
+
+
+
+Guiding principles (the "4 rules of simple design")
+
+
+    1. Works and we can demonstrate that it works.
+        (All tests pass. And exist.)
+
+
+    2. Expresses developer intent.
+        (Names are clear & stuff does one thing.)
+
+
+    3. Does not contain duplication.
+        (Knowledge is in one place.)
+
+
+    4. Fewest number of moving parts.
+        (Take out what you can without violating the first three.)
+
+
+
+
+
+
+
+(Google them. Lots of interesting stuff.)
+
