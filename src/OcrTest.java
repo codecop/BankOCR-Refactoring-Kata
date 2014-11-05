@@ -59,6 +59,13 @@ public class OcrTest {
                                "                                    "));
     }
 
-  
+    @Test
+    public void checksum_fail_returns_ERR() {
+        assertEquals(asList("664371495 ERR"),
+                      Ocr.parse(" _   _       _   _           _   _  ",
+                                "|_  |_  |_|  _|   |   | |_| |_| |_  ",
+                                "|_| |_|   |  _|   |   |   |  _|  _| ",
+                                "                                    "));
+    }
 }
 
