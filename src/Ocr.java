@@ -50,19 +50,19 @@ public class Ocr {
         for (int i = 0; i < lines.length; i += 4) {
             final char[] work = new char[13];
             work[9] = work[10] = work[11] = work[12] = ' ';
-            for (int j = 0; j < 9; ++j) {
-                work[j] = '?';
+            for (int pos = 0; pos < 9; ++pos) {
+                work[pos] = '?';
                 boolean got1 = false;
-                for (int k = 0; k <= 9; ++k) {
+                for (int numeral = 0; numeral <= 9; ++numeral) {
                     boolean ok = true;
-                    for (int l = 0; l < 4; ++l) {
-                        for (int m = 0; m < 4; ++m) {
-                            if (DIGITS[k][l][m] != lines[i+l].charAt(4*j+m))
+                    for (int row = 0; row < 4; ++row) {
+                        for (int col = 0; col < 4; ++col) {
+                            if (DIGITS[numeral][row][col] != lines[i+row].charAt(4*pos+col))
                                 ok = false;
                         }
                     }
                     if (ok) {
-                        work[j] = (char)(k + (int)'0');
+                        work[pos] = (char)(numeral + (int)'0');
                         got1 = true;
                         break;
                     }
