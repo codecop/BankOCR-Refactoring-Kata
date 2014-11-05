@@ -3,12 +3,47 @@ import java.util.ArrayList;
 
 public class Ocr {
 
-    private static final char[][] DIGITS = new char[][] {
-            " _       _   _       _   _   _   _   _  ".toCharArray(),
-            "| |   |  _|  _| |_| |_  |_    | |_| |_| ".toCharArray(),
-            "|_|   | |_   _|   |  _| |_|   | |_|  _| ".toCharArray(),
-            "                                        ".toCharArray()
-    };
+    private static final char[][][] DIGITS = new char[][][] {
+        {" _  ".toCharArray(),
+         "| | ".toCharArray(),
+         "|_| ".toCharArray(),
+         "    ".toCharArray()},
+        {"    ".toCharArray(),
+         "  | ".toCharArray(),
+         "  | ".toCharArray(),
+         "    ".toCharArray()},
+        {" _  ".toCharArray(),
+         " _| ".toCharArray(),
+         "|_  ".toCharArray(),
+         "    ".toCharArray()},
+        {" _  ".toCharArray(),
+         " _| ".toCharArray(),
+         " _| ".toCharArray(),
+         "    ".toCharArray()},
+        {"    ".toCharArray(),
+         "|_| ".toCharArray(),
+         "  | ".toCharArray(),
+         "    ".toCharArray()},
+        {" _  ".toCharArray(),
+         "|_  ".toCharArray(),
+         " _| ".toCharArray(),
+         "    ".toCharArray()},
+        {" _  ".toCharArray(),
+         "|_  ".toCharArray(),
+         "|_| ".toCharArray(),
+         "    ".toCharArray()},
+        {" _  ".toCharArray(),
+         "  | ".toCharArray(),
+         "  | ".toCharArray(),
+         "    ".toCharArray()},
+        {" _  ".toCharArray(),
+         "|_| ".toCharArray(),
+         "|_| ".toCharArray(),
+         "    ".toCharArray()},
+        {" _  ".toCharArray(),
+         "|_| ".toCharArray(),
+         " _| ".toCharArray(),
+         "    ".toCharArray()}};
 
     public static List<String> parse(String... lines) {
         final List<String> result = new ArrayList<String>();
@@ -22,7 +57,7 @@ public class Ocr {
                     boolean ok = true;
                     for (int l = 0; l < 4; ++l) {
                         for (int m = 0; m < 4; ++m) {
-                            if (DIGITS[l][4*k+m] != lines[i+l].charAt(4*j+m))
+                            if (DIGITS[k][l][m] != lines[i+l].charAt(4*j+m))
                                 ok = false;
                         }
                     }
