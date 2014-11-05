@@ -27,3 +27,7 @@ Implement a checksum.
 
     Example returns: "664371495 ERR"
 
+        " _   _       _   _           _   _  "
+        "|_  |_  |_|  _|   |   | |_| |_| |_  "
+        "|_| |_|   |  _|   |   |   |  _|  _| "
+        "                                    "
