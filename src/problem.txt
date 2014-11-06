@@ -6,7 +6,7 @@ OCR Kata Requirements
         "|_| |_| |_| |_| |_| |_| |_| |_| |_| "
         "|_| |_| |_| |_| |_| |_| |_| |_| |_| "
         "                                    "
-   Example returns: "888888888"
+   Example returns: "888888888    "
 
 2. Accepts more than one account number in a single set of strings (so, more than 4).
 
