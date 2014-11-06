@@ -1,4 +1,4 @@
-
+github.com/maitria/ocr-kata
 
 
 TDD is often thought of as going from red to green.
