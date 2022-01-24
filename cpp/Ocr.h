@@ -6,7 +6,7 @@
 
 class Ocr {
 public:
-    static std::vector<std::string> parse(std::string lines[]);
+    static std::vector<std::string> parse(std::string lines[], size_t numberLines);
 
 private:
     static const char NUMERALS[10][4][5];

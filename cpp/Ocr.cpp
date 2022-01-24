@@ -45,10 +45,10 @@ const char Ocr::NUMERALS[10][4][5] = {{" _  ",  /* */
                                        " _| ",  /* */
                                        "    "}};
 
-vector<string> Ocr::parse(string lines[])
+vector<string> Ocr::parse(string lines[], size_t numberLines)
 {
     vector<string> result = {};
-    for (int i = 0; i < lines->size(); i += 4) {
+    for (int i = 0; i < numberLines; i += 4) {
         char work[] = "             ";
         for (int pos = 0; pos < 9; ++pos) {
             work[pos] = '?';
