@@ -22,5 +22,5 @@ set(TEST_SOURCES main.cpp ocr_gtest.cpp)
 
 add_executable(${TEST_NAME})
 target_sources(${TEST_NAME} PRIVATE ${TEST_SOURCES} ${SOURCES})
-target_link_libraries(${TEST_NAME} gtest)
+target_link_libraries(${TEST_NAME} gtest gmock)
 gtest_discover_tests(${TEST_NAME})
