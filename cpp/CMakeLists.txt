@@ -15,7 +15,7 @@ include(GoogleTest)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCES Ocr.cpp)
+set(SOURCES Ocr.cpp, Ocr.h)
 
 set(TEST_NAME OcrTest)
 set(TEST_SOURCES main.cpp ocr_gtest.cpp)
