@@ -1,0 +1,35 @@
+name: Test Kotlin
+
+on:
+  push:
+    paths:
+      - 'kotlin/**'
+      - '.github/workflows/kotlin.yml'
+  pull_request:
+    paths:
+      - 'kotlin/**'
+      - '.github/workflows/kotlin.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out the repo
+      uses: actions/checkout@v2
+
+    - name: Set up Java
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Cache gradle wrapper
+      uses: actions/cache@v2
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+        key: ${{ runner.os }}-gradle-${{ hashFiles('Kotlin/**/*.gradle*', 'Kotlin/**/gradle-wrapper.properties') }}
+        restore-keys: ${{ runner.os }}-gradle
+
+    - name: Build and test
+      working-directory: kotlin
+      run: ./gradlew clean test -i

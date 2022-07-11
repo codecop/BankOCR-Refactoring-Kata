@@ -1,0 +1,33 @@
+name: Test Java
+
+on:
+  push:
+    paths:
+      - 'java/**'
+      - '.github/workflows/java.yml'
+  pull_request:
+    paths:
+      - 'java/**'
+      - '.github/workflows/java.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out the repo
+      uses: actions/checkout@v2
+
+    - name: Set up Java
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Cache Maven packages
+      uses: actions/cache@v2
+      with:
+        path: ~/.m2
+        key: ${{ runner.os }}-m2-${{ hashFiles('Java/pom.xml') }}
+        restore-keys: ${{ runner.os }}-m2
+
+    - name: Build and test
+      working-directory: java
+      run: mvn -B test
