@@ -16,6 +16,6 @@ See the `problem.txt` in the project root.
 The code is fully covered with tests so you can start refactoring it right away.
 
 1. What is wrong with the `OCR` class?
-1. Refactor the `parse` method.
+1. Refactor its `parse` method.
 1. Consider a future requirement change where the input changes, e.g. the style of digits, number of digits etc.
-1. Don't Focus on Getting it Done. Focus on Doing It Perfectly.
+1. Don't focus on getting it done. Focus on doing it perfectly.
