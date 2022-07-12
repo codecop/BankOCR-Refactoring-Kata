@@ -3,7 +3,7 @@
 Refactoring kata dealing with Primitive Obsession.
 
 The code is an implementation of the [Bank OCR](https://codingdojo.org/kata/BankOCR/)
-as shown by Angela Harms in her talk [Witness TDD with Real, Live Refactoring Maniacs](https://vimeo.com/111289425)
+as shown by Angela Harms and Jason Felice in their talk [Witness TDD with Real, Live Refactoring Maniacs](https://vimeo.com/111289425)
 at Oredev conference 2014. 
 This repository started as a clone of the [original code](https://github.com/maitria/ocr-kata).
 
