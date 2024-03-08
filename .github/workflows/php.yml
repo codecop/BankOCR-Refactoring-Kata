@@ -1,0 +1,31 @@
+name: Test PHP
+
+on:
+  push:
+    paths:
+      - 'php/**'
+      - '.github/workflows/php.yml'
+  pull_request:
+    paths:
+      - 'php/**'
+      - '.github/workflows/php.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out the repo
+      uses: actions/checkout@v3
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: 7.3
+
+    - name: Set up dependencies
+      working-directory: php
+      run: composer install
+
+    - name: Test
+      working-directory: php
+      run: ./vendor/bin/phpunit
