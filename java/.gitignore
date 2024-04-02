@@ -1,6 +1,9 @@
 # Idea
 .idea
 *.iml
+*.ipr
+*.iws
+local.properties
 
 # Maven
 target
@@ -8,6 +11,7 @@ target
 # Gradle
 .gradle
 build
+out
 
 # Eclipse
 .project
