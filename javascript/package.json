@@ -1,0 +1,12 @@
+{
+    "name": "bank-ocr-refactoring-kata",
+    "version": "0.0.1",
+    "scripts": {
+        "test": "jest",
+        "test:coverage": "jest --coverage"
+    },
+    "devDependencies": {
+        "@types/jest": "^27.0.0",
+        "jest": "^27.0.0"
+    }
+}
