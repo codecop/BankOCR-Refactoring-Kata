@@ -1,0 +1,31 @@
+name: Test C
+
+on:
+  push:
+    paths:
+      - 'c/**'
+      - '.github/workflows/c.yml'
+  pull_request:
+    paths:
+      - 'c/**'
+      - '.github/workflows/c.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out the repo
+      uses: actions/checkout@v3
+
+    - name: Set up dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install libcmocka-dev
+
+    - name: Build
+      working-directory: c
+      run: gcc -std=c99 Ocr.c OcrTest.c -l cmocka -o OcrTest
+
+    - name: Test
+      working-directory: c
+      run: ./OcrTest
