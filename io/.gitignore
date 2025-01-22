@@ -1,0 +1,11 @@
+.DS_Store
+
+# Eerie/C build
+.transaction_lock
+_bin
+_build
+_packs
+Io*Init.c
+
+# Docio generated
+docs/

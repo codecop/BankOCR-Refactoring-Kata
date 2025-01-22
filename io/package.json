@@ -1,0 +1,11 @@
+{
+  "name": "bank-ocr-refactoring-kata",
+  "version": "0.1.0",
+  "protos": [ "Ocr" ],
+  "dependencies": {
+    "libs": [],
+    "headers": [],
+    "protos": [],
+    "packages": []
+  }
+}
