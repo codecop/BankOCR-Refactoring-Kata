@@ -1,0 +1,30 @@
+name: Test Io
+
+on:
+  push:
+    paths:
+      - 'io/**'
+      - '.github/workflows/io.yml'
+  pull_request:
+    paths:
+      - 'io/**'
+      - '.github/workflows/io.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out the repo
+      uses: actions/checkout@v3
+
+    - name: Set up Io
+      run: |
+        wget -q http://iobin.suspended-chord.info/linux/iobin-linux-x64-deb-current.zip
+        unzip -qq iobin-linux-x64-deb-current.zip
+        sudo dpkg -i IoLanguage-2013.11.04-Linux-x64.deb
+        sudo ldconfig
+        io --version
+
+    - name: Test
+      working-directory: io
+      run: io ./tests/correctness/run.io
