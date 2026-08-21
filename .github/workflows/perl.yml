@@ -1,0 +1,31 @@
+name: Test Perl Moose
+
+on:
+  push:
+    paths:
+      - 'perl/**'
+      - '.github/workflows/perl.yml'
+  pull_request:
+    paths:
+      - 'perl/**'
+      - '.github/workflows/perl.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out the repo
+      uses: actions/checkout@v4
+
+    - name: Set up Perl
+      uses: shogo82148/actions-setup-perl@v1
+      with:
+        perl-version: '5.20'
+
+    - name: Set up dependencies
+      working-directory: perl
+      run: cpanm --installdeps .
+
+    - name: Test
+      working-directory: perl
+      run: prove -v t/ocr.t

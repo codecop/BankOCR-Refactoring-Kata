@@ -1,4 +1,4 @@
-# BankOCR Refactoring Kata — Perl (Moose)
+# BankOCR Refactoring Kata Perl (with Moose)
 
 ## Prerequisites
 
@@ -9,10 +9,4 @@
 
 ```sh
 prove -v t/ocr.t
-```
-
-## Watch mode
-
-```sh
-fswatch -o lib/ t/ | xargs -n1 -I{} prove -v t/ocr.t
 ```
