@@ -20,7 +20,8 @@ jobs:
     - name: Set up Java
       uses: actions/setup-java@v6
       with:
-        java-version: 1.8
+        distribution: 'temurin'
+        java-version: 8
     - name: Cache gradle wrapper
       uses: actions/cache@v6
       with:
