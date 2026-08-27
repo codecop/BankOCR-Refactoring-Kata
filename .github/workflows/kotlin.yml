@@ -22,7 +22,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Cache gradle wrapper
-      uses: actions/cache@v2
+      uses: actions/cache@v6
       with:
         path: |
           ~/.gradle/caches
